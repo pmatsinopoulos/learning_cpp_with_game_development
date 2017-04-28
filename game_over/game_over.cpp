@@ -2,8 +2,9 @@
 // A first C++ Program
 
 #include <iostream>
+using namespace std;
 
 int main() {
-	std::cout << "Game Over!" << std::endl;
-	return 0;
+  cout << "Game Over!" << endl;
+  return 0;
 }
