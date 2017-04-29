@@ -1,35 +1,40 @@
+// Demonstrates Arithmetic Operations with Variables
+
 #include <iostream>
 using namespace std;
 
 int main() {
-  int score;
-  double distance;
-  char playAgain;
-  bool shieldsUp;
-  short lives, aliensKilled;
+  unsigned int score = 50000;
+  cout << "score: " << score << endl;
 
-  score = 0;
-  distance = 1200.76;
-  playAgain = 'y';
-  shieldsUp = true;
-  lives = 3;
-  aliensKilled = 10;
+  score += 100;
+  cout << "score: " << score << endl;
 
-  double engineTemp = 6572.89;
-
-  cout << "\nscore: " << score << endl;
-  cout << "distance: " << distance << endl;
-  cout << "play again: " << playAgain << endl;
+  int lives = 3;
+  ++lives;
   cout << "lives: " << lives << endl;
-  cout << "aliens killed: " << aliensKilled << endl;
-  cout << "engine temp: " << engineTemp << endl;
 
-  int fuel;
-  cout << "\nHow much fuel? ";
-  cin >> fuel;
-  cout << "fuel: " << fuel << endl;
-  typedef unsigned short int ushort;
-  ushort bonus = 10;
-  cout << "\nbonus: " << bonus << endl;
+  lives = 3;
+  lives++;
+  cout << "lives: " << lives << endl;
+
+  lives = 3;
+  int bonus = ++lives * 10;
+  cout << "lives, bonus = " << lives << ", " << bonus << endl;
+  
+  lives = 3;
+  bonus = lives++ * 10;
+  cout << "lives, bonus = " << lives << ", " << bonus << endl;
+
+  score = 4294967295;
+  cout << "score: " << score << endl;
+  ++score;
+  cout << "score: " << score << endl;
+
+  int score2 = INT_MAX;
+  cout << "score2: " << score2 << endl;
+  score2++;
+  cout << "score2: " << score2 << endl;
+
   return 0;
 }
