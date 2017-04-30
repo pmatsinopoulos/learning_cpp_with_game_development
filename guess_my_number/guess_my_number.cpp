@@ -8,10 +8,12 @@ int main () {
   int number = (rand() % 100) + 1;
   bool found = false;
   char answer = 'y';
+  int numberOfGuesses = 0;
 
   while (answer == 'y' && !found) {
     cout << "What is the number? (1..100)" << endl;
     cin >> guess ;
+    numberOfGuesses++;
     if (guess < number) {
       cout << "Your guess is low. Try a greater number" << endl;
     }
@@ -20,6 +22,7 @@ int main () {
     }
     else {
       cout << "Bingo! You just found the number" << endl;
+      cout << "You found it in " << numberOfGuesses << " tries";
       found = true;
     }
     if (!found) {
